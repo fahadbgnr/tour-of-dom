@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>welcome to my dom</h1>
+    </header>
+    <main>
+        <h1>My Awesome Dom De Baba </h1>
+        <ul>
+            <li>jalali set</li>
+            <li>shafayat</li>
+            <li>bonobash</li>
+        </ul>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        // const student = {
+        //     name: 'abul',
+        //     ID: 11,
+        //     study: function(time){
+        //         console.log(time, 'study kortese')
+        //     }
+        // }
+        // console.log('adding JS inside the html file');
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for(const li of liCollection){
+            // console.log(li);
+            console.log(li.innerText);
+
+        }
+       
+    </script>
+</body>
+</html>
