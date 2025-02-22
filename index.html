@@ -5,18 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Of Dom</title>
     <link rel="stylesheet" href="style/style.css">
+    <style>
+        li{
+            color: tomato;
+        }
+        #furits-title{
+            color: black;
+        }
+        .important-places{
+            color:blue;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>welcome to my dom</h1>
     </header>
     <main>
-        <h1>My Awesome Dom De Baba </h1>
+        <section>
+            <h1>My Awesome Dom De Baba </h1>
         <ul>
             <li>jalali set</li>
             <li>shafayat</li>
             <li>bonobash</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="furits-title">fruits i like </h1>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Orange</li>
+        </ul>
+        </section>
+        <section>
+            <h1 id="places-title">My favorite place </h1>
+        <ul>
+            <li class="important-places">Shundorban</li>
+            <li class="important-places">Bhandarban</li>
+            <li class="important-places">cox's Bazar</li>
+        </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
@@ -34,6 +63,14 @@
             // console.log(li);
             console.log(li.innerText);
 
+        }
+        const furitsTitle = document.getElementById('furits-title');
+        furitsTitle.innerText = 'Furits Changes By JS';
+
+        
+        const places = document.getElementsByClassName('important-places');
+        for(const place of places){
+            console.log(place.innerText);
         }
        
     </script>
