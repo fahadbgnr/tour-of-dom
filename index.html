@@ -15,6 +15,9 @@
         .important-places{
             color:blue;
         }
+        .fruits-container li {
+            color: bisque;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +33,7 @@
             <li>bonobash</li>
         </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="furits-title">fruits i like </h1>
         <ul>
             <li>Apple</li>
@@ -57,6 +60,10 @@
         //     }
         // }
         // console.log('adding JS inside the html file');
+
+
+        
+        // getElementsByTagName (optional)
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
         for(const li of liCollection){
@@ -64,13 +71,22 @@
             console.log(li.innerText);
 
         }
+        // getElementById (important)
         const furitsTitle = document.getElementById('furits-title');
         furitsTitle.innerText = 'Furits Changes By JS';
 
-        
+        // getElementsByClassName (important)
         const places = document.getElementsByClassName('important-places');
         for(const place of places){
             console.log(place.innerText);
+        }
+        // querySelector (semi Important)
+
+        // querySelectorAll (semi Important)
+        const someLi = document.querySelectorAll('fruits-container li');
+        // console.log(someLi);
+        for (const li of someLi){
+            console.log(li.innerText);
         }
        
     </script>
